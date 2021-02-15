@@ -246,15 +246,15 @@ if __name__ == '__main__':
                 #print(['{:0.2f}'.format(pt) for pt in prev_face_tem], '{:0.2f}'.format(face_tem), end=' ')            
 
                 recent_occurrences = sum(t > (face_tem - 1.0) and t < (face_tem + 1.0) for t in prev_face_tem)
-                img = img.resize((img.width * 10, img.height * 10), Image.BICUBIC)
 
                 if face_tem > 25.0 and recent_occurrences > 2:
                     img = thermal_camera.img_out
                     detected = True
-                    draw = ImageDraw.Draw(img)
-                    font = ImageFont.truetype("arial.ttf", 24)
-                    draw.text((0, 0), face_tem, (0, 0, 0),font=font)
+                    #draw = ImageDraw.Draw(img)
+                   # font = ImageFont.truetype("arial.ttf", 24)
+                    #draw.text((0, 0), face_tem, (0, 0, 0),font=font)
 
+                img = img.resize((img.width * 10, img.height * 10), Image.BICUBIC)
                 out_img = np.array(img)
                 out_stream.write(out_img) 
 
