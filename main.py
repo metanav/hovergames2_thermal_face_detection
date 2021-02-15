@@ -146,13 +146,13 @@ def face_detect(frame):
     img_ori = img.crop((0, 0, img.width, img.width))
     img = img_ori.resize((width, height), Image.BICUBIC)
     
-    #print("inference time = {:.2f} ms".format((time.time() - start_ms) * 1000.0))
     input_data = np.expand_dims(img, axis=0)
     input_data = (np.float32(input_data) - input_mean) / input_std
     
     interpreter.set_tensor(input_details[0]['index'], input_data)
     interpreter.invoke()
     
+    print("inference time = {:.2f} ms".format((time.time() - start_ms) * 1000.0))
     output_r = interpreter.get_tensor(output_details[0]['index'])
     output_c = interpreter.get_tensor(output_details[1]['index'])
     scores   = np.clip(output_c, a_min=-100.0, a_max=100.0) #clamp
@@ -172,7 +172,6 @@ def face_detect(frame):
 
     img_out = img_ori.copy() 
     img_out, max_tem = draw_rectangle(img_out, tem, output_boxes, output_scores, 2)
-    print(max_tem)
 
     return img_ori, img_out, max_tem
 
@@ -250,11 +249,14 @@ if __name__ == '__main__':
                 if face_tem > 25.0 and recent_occurrences > 2:
                     img = thermal_camera.img_out
                     detected = True
-                    #draw = ImageDraw.Draw(img)
-                   # font = ImageFont.truetype("arial.ttf", 24)
-                    #draw.text((0, 0), face_tem, (0, 0, 0),font=font)
 
                 img = img.resize((img.width * 10, img.height * 10), Image.BICUBIC)
+                 
+                if detected:
+                    draw = ImageDraw.Draw(img)
+                    font = ImageFont.truetype("arial.ttf", 18)
+                    draw.text((0, 0), '{:0.1f} C'.format(face_tem), (0, 0, 0),font=font)
+
                 out_img = np.array(img)
                 out_stream.write(out_img) 
 
