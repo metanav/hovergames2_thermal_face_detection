@@ -1,4 +1,4 @@
-# Hovergames2 Thermal Face Detection
+# NXPHoverGames: Face Thermal Measurement
 This is a demo application using Tensorflow Lite to detect face and calculate temperature using a low resolution thermal camera
 
 ## Run application
