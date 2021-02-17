@@ -1,5 +1,7 @@
 # NXPHoverGames: Face Thermal Measurement
-This is a demo application using Tensorflow Lite to detect face and calculate temperature using a low resolution thermal camera
+
+In this project, I built an application which can be used to measure the temperature of a human face from thermal camera readings and can accurately measure person temperature by extrapolating the facial skin temperature. This application has many use-cases for example, it can be used to search and rescue a person in dark or low light condition where generic digital camera may not work. It can be used as a contactless temperature monitoring. This application also serve as a demo for use of Tensorflow Lite on RDDRONE-8MMNavQ "NavQ" Linux companion computer platform based on NXP i.MX 8M Mini SOC.
+Please see the complete project story at https://www.hackster.io/naveenbskumar/nxphovergames-face-thermal-measurement-69d0ed
 
 ## Run application
 ```
