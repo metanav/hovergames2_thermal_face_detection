@@ -19,3 +19,7 @@ cd hovergames2_thermal_face_detection.git
 sudo python3 main.py
 ```
 
+## Inferencing Demo
+
+
+
