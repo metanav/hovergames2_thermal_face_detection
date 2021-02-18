@@ -21,6 +21,8 @@ sudo python3 main.py
 
 ## Inferencing Demo
 
+The inferencing rate is 17 FPS which is quite impressive for such a low powered 8MMNavQ.
+
 ![Demo](images/infer.gif)
 
 
