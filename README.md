@@ -7,7 +7,7 @@ Note: The BlazeFace TensorFlow Lite model used in the application was downloaded
 
 ## Thermal Camera Setup
 The MLX90640 thermal camera is connected to the NavQ using a 9-pin JST-GH cable. 
-
+![Connection](images/connection.jpg)
 
 ## Run application
 ```
