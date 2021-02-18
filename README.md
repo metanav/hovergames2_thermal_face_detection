@@ -5,6 +5,10 @@ Please see the complete project story at https://www.hackster.io/naveenbskumar/n
 
 Note: The BlazeFace TensorFlow Lite model used in the application was downloaded from https://github.com/google/mediapipe
 
+## Thermal Camera Setup
+The MLX90640 thermal camera is connected to the NavQ using a 9-pin JST-GH cable. 
+
+
 ## Run application
 ```
 git clone https://github.com/metanav/hovergames2_thermal_face_detection.git
