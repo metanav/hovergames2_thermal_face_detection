@@ -10,6 +10,7 @@ The MLX90640 thermal camera is connected to the NavQ using a 9-pin JST-GH cable.
 Note: The 5 unused wires have been cut off to keep the connection clean.
 
 ![Connection](images/connection_2.jpg)
+![Schematics](images/hovergames2_schematics.jpg)
 
 ## Run application
 ```
