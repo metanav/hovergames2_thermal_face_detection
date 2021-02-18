@@ -21,5 +21,7 @@ sudo python3 main.py
 
 ## Inferencing Demo
 
+![Demo](images/infer.gif)
+
 
 
