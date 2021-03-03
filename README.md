@@ -19,6 +19,10 @@ cd hovergames2_thermal_face_detection.git
 sudo python3 main.py
 ```
 
+## Test flight
+![Test](images/test_flight_hovergames.gif)
+Full video: https://youtu.be/uLdP8SNedew
+
 ## Inferencing Demo
 
 The inferencing rate is 17 FPS which is quite impressive for such a low powered 8MMNavQ.
