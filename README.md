@@ -20,7 +20,8 @@ sudo python3 main.py
 ```
 
 ## Test flight
-![Test](images/test_flight_hovergames.gif)
+![Test](images/test_flight_hovergames_2.gif)
+
 Full video: https://youtu.be/uLdP8SNedew
 
 ## Inferencing Demo
